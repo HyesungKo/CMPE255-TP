@@ -1,0 +1,246 @@
+.App {
+  text-align: center;
+}
+
+.body{
+  background-color: #eeeeee;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.header-label {
+  color: grey;
+}
+
+.card-img-top {
+  position: absolute;
+  top: -60px !important;
+  left: 10% !important;
+  margin-left: -30px;
+  width: 100px !important;
+  height: 100px !important;
+}
+
+.subtitle {
+ font-size: 12px !important;
+ margin:10px 10px 10px 10px;
+}
+
+.google-button{
+  font-family: IBMPlexSans,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  line-height: 32px;
+  color: #fff;
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  background: #0079d3;
+  text-transform: uppercase;
+  cursor: pointer;
+  line-height: unset;
+  height: 40px;
+  max-width: 250px;
+  width: relative;
+  min-width: 155px;
+  padding: 5px 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-color: #fff;
+  color: #0079d3;
+  height: relative;
+  border: 1px solid #0079d3;
+  display: block;
+  margin: 8px 0;
+  padding: 12px 28px;
+  width: 80%;
+}
+.sidecard-label{
+  color: #fff;
+}
+
+.card-action-label{
+  font-size: small;
+}
+.login-button{
+  font-family: Noto Sans,sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: unset;
+  line-height: 18px;
+  text-transform: unset;
+  background: #0079d3;
+  border-radius: 999px;
+  color: #fff;
+  height: 35px;
+  padding: 0 16px;
+  width:47%
+}
+
+.Sso__divider.m-small-margin {
+  margin: 12px 0;
+}
+
+.Sso__divider {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 28px 0;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  margin: 12px 0;
+}
+
+.login-textfield{
+  font-size:xx-small
+}
+
+.button-label{
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #0079d3;
+}
+
+.sso-button{
+  padding:0px 0px 10px 0px
+}
+.reader-content{
+  font-family: Noto Sans,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+.card-data-label{
+  text-align-last: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.card-sub-header{
+  text-align-last: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  display: inline-block;
+  word-break: break-word;
+}
+
+.card-created-data{
+  font-family: Noto Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+}
+.border{
+  margin:10px 5px 5px 5px !important;
+  border:none;
+  border-radius: none;
+}
+.Art {
+  background-image: url(https://www.redditstatic.com/accountmanager/bbb5840….png);
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width:90% !important;
+}
+
+.login-image{
+padding:0px !important
+}
+.Sso__dividerLine {
+  border-top: 1px solid #edeff1;
+  width: 20%;
+}
+
+.sso-google-button{
+  font-size:12px ;
+  position: relative;
+  text-align: left;
+}
+.title{
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  margin: 20px 0;
+}
+.card-header{
+  margin: -25px 0px 0px 80px;
+  background-color: #ffffff;
+}
+
+.card {
+  margin-top: 30px;
+  padding-top: 30px;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.header-user,
+.btn-primary:hover,
+.show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+}
+
+.searchIcon{
+  padding: 0px 2px 0px 0px;
+  height: '100%';
+  position: 'absolute';
+  display: 'flex';
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Added By Ruchir */
+/* START */
+:root {
+  --border-radius: 5px;
+  --border-color: rgb(121, 83, 169);
+}
+
+.hoverable:hover {
+  cursor: pointer;
+}
+/* END */
