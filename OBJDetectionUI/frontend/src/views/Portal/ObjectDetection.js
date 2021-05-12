@@ -16,19 +16,26 @@ import Col from 'react-bootstrap/Col';
 import axios from 'axios';
 import  TextField from '@material-ui/core/TextField';
 import { Typography } from '@material-ui/core';
+import Card from '@material-ui/core/Card';
+import CardHeader from '@material-ui/core/CardHeader';
+import CardMedia from '@material-ui/core/CardMedia';
+import CardContent from '@material-ui/core/CardContent';
 import Container from 'react-bootstrap/Container';
 import { Form, Carousel } from 'react-bootstrap';
 import Dropdown from 'react-bootstrap/Dropdown';
 
 // eslint-disable-next-line arrow-body-style
+
 const ObjectDetection = () => {
   const [imageList, addImage] = useState([]);
   const [imgCounter, addCounter] = useState(0);
   const [showImage, addShowImage] = useState([]);
+  const [resp, changeResp] = useState(false);
+  const [responseText, changeText] = useState('');
 
   const ImageTake = async (event) => {
     const url = URL.createObjectURL(event.target.files[0]);
-    addShowImage([...showImage, url]);
+    addShowImage([url]);
     addCounter(imgCounter + 1);
     addImage([
       ...imageList,
@@ -40,16 +47,25 @@ const ObjectDetection = () => {
     ]);
   };
   const submit = async () => {
-    const formData = new FormData();
-    formData.append('profileImage',imageList[0].file,imageList[0].file_name);
-    const config = {
-      headers: { 
-        'content-type': 'multipart/form-data'
+    if (imageList.length > 0){
+      const formData = new FormData();
+      formData.append('profileImage',imageList[0].file,imageList[0].file_name);
+      const config = {
+        headers: { 
+          'content-type': 'multipart/form-data'
+        }
+      }
+      const response = await axios.post('http://localhost:5000/imageadd',formData,config)
+      if (response.status === 200) {
+        changeText(response.data.text)
+        changeResp(true)
       }
     }
-    const response = await axios.post('http://localhost:5000/imageadd',formData,config)
-    console.log(response)
-
+  }
+  const onClear = () => {
+    changeResp(false)
+    addShowImage([])
+    addImage([])
   }
   return (
     <>
@@ -95,7 +111,7 @@ const ObjectDetection = () => {
                     'border-color': '#0579d3',
                     marginLeft: "2%"
                   }}
-                  onClick="Submit"
+                  onClick={() => onClear()}
                 >
                   Clear
                 </Button>
@@ -125,7 +141,16 @@ const ObjectDetection = () => {
               </Col>
                     
               <Col>
-              <TextField/>
+              {resp ?<Card >
+      <CardHeader
+        title="Response"
+      />
+      <CardContent>
+        <Typography variant="body2" color="textSecondary" component="p">{responseText}
+        </Typography>
+      </CardContent>
+      </Card>:null
+      }
               </Col>
               </Row>
             </Container>
