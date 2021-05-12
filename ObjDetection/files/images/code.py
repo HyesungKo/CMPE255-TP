@@ -36,7 +36,7 @@ def get_image_predict(image_path):
     (x, y, w, h) = cv2.boundingRect(c)
     # filter out bounding boxes, ensuring they are neither too small
     # nor too large
-    if (w >= 5 and w <= 150) and (h >= 15 and h <= 200):
+    if (w >= 15 and w <= 150) and (h >= 8 and h <= 200):
       # extract the character and threshold it to make the character
       # appear as *white* (foreground) on a *black* background, then
       # grab the width and height of the thresholded image
