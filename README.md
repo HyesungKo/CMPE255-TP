@@ -9,3 +9,5 @@ https://www.kaggle.com/sachinpatel21/az-handwritten-alphabets-in-csv-format</li>
 <li>Dataset 2: Hand-written Digits<br />
 <t>https://keras.io/api/datasets/mnist/</li>
 </ul>
+
+Contribution from Tejas in separate branch "tejas"
