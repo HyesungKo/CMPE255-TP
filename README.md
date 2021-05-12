@@ -1,6 +1,6 @@
 # CMPE255-Team Project
 ## Turning Handwritten Documents into Digitized Versions
 
-This type of project is a perfect way to practice deep learning and neural networks — essentials for image recognition in machine learning. Beginners can also learn how to turn pixel data into images, as well as how to use logistic regression and MNIST datasets.
+Trying different activations (relu, sigmoid, tanh, softmax) and optimizations (ADAM and SGD with default learning rates)
 
-Trying different activations and optimizations
+We found that accuracy and performance was best with relu, softmax and ADAM
