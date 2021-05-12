@@ -10,4 +10,6 @@ https://www.kaggle.com/sachinpatel21/az-handwritten-alphabets-in-csv-format</li>
 <t>https://keras.io/api/datasets/mnist/</li>
 </ul>
 
+For final submission, please check the 'Final Submission' folder.
+
 Contribution from Tejas in separate branch "tejas"
